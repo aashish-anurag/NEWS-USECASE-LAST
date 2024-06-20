@@ -1,0 +1,34 @@
+NEWS SERVICE
+
+Endpoint -> everything
+
+http://localhost:8989/api/v1/everything
+
+{
+    "q":"bitcoin",
+    "searchIn":"",
+    "sources":"",
+    "domains":"",
+    "excludeDomains":"",
+    "from":"",
+    "to":"",
+    "language":"",
+    "sortBy":"",
+    "pageSize":"",
+    "page":""
+}
+
+Endpoint -> Topheadlines
+
+http://localhost:8989/api/v1/topheadlines
+
+{
+    "q":"",
+    "sources":"",
+    "country":"us",
+    "category":"",
+    "pageSize":"20",
+    "page":"1"
+}
+
+=====================================

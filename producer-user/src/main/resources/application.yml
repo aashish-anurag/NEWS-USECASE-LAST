@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: PRODUCER-USER
+  datasource:
+    url: jdbc:mysql://localhost:3306/demodb?allowPublicKeyRetrieval=false&serverTimezone=UTC
+    username: root
+    password: Root@123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    #config:
+    # import: "configserver:http://localhost:9296"
+#  security:
+ #   oauth2:
+  #    resource-server:
+   #     jwt:
+    #      issuer-uri: https://dev-90308673.okta.com/oauth2/default
+     # client:
+      #  registration:
+       #   internal-client:
+        #    provider: okta
+         #   authorization-grant-type: client_credentials
+          #  scope: internal
+           # client-id: 0oahruav06NxnuLHH5d7
+            #client-secret: 3kyuAX0QI8-aGfaTX4cGN5jSZl6erT2IDzp7On0MY2nQCMlfJZKYDXnApzPkdfVI
+  cloud:
+    config:
+      enabled: false
+
+
+logging:
+  level:
+    reactor:
+      netty:
+        http:
+          client:
+            HttpClient: DEBUG
